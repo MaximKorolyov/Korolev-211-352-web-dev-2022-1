@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Форма обратной связи</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=PT+Sans:ital,wght@0,700;1,400&family=Source+Sans+Pro:ital,wght@1,600&display=swap" rel="stylesheet">
+
+
+</head>
+
+<body>
+        
+    <main>
+            <h1 class="hh">Форма обратной связи</h1>
+
+            <form method="POST" action="https://httpbin.org/post" enctype="multipart/form-data">
+
+                <input type="hidden" name="user_id" value="1">
+
+                <div class="redak">
+                    <label for="lastname">Фамилия</label>
+                    <input type="text" name="lastname" id="lastname" required placeholder="Фамилия">
+
+                    <label for="name">Имя</label>
+                    <input type="text" name="name" id="name" required placeholder="Как вас зовут?">
+
+                    <label for="secondname">Отчество</label>
+                    <input type="text" name="secondname" id="secondname" placeholder="Ваше отчество">
+                </div>
+
+                <div style="height: 50px;">
+                    <label for="email">Адрес электронной почты</label>
+                    <input type="email" name="email" id="email" required placeholder="Ваша почта">
+                </div>
+
+
+                <div style="height: 100px;">
+                    <fieldset class="color">
+                        
+                            <legend class="legen">Откуда вы о нас узнали?</legend>
+
+                            <div>
+                                <input type="radio" id="friends" name="source" value="friends" required>
+                                <label for="friends">Рассказали друзья</label>
+                            </div>
+
+                            <div>
+                                <input type="radio" id="internet" name="sourcel" value="internet" required>
+                                <label for="internet">Реклама в интернете</label>
+                            </div>
+                        
+                    </fieldset>
+                </div>
+
+                <div> 
+                    <label for="category">Категория обращения</label>
+                    <select name="category_id" id="category">
+                        <option value="1">Жалоба</option>
+                        <option value="2" selected>Предложение</option>
+                    </select>
+                </div>
+
+                <div>
+                    
+                    <textarea name="msg" id="msg" cols="60" rows="20" placeholder="Введите текст"></textarea>
+                    <label for="msg"></label>
+                </div>
+
+                <div style="height: 40px;">
+                    <input type="checkbox" name="agreement" id="agreement" value="true" required>
+                    <label for="agreement">Согласен с обработкой персональных данных</label>
+
+                </div>
+
+                <div class="color">
+                    <label for="attachment">Вложение</label>
+                    <input type="file" name="attachment" id="attachment">
+
+                </div>
+
+                <div style="height: 50px;">
+                    <button type="submit">Отправить</button>
+                </div>
+                
+            </form>
+            <form action="auth.html">
+                <div style="height: 60px;">
+                    <button type="submit">Авторизация</button>
+                </div> 
+            </form> 
+    </main>
+</body>
+</html>
