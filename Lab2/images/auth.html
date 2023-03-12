@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Source+Sans+Pro:ital,wght@1,600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="styles.css">
+
+</head>
+<body>
+    <main>
+        <form method="POST" action="https://httpbin.org/post" enctype="multipart/form-data">
+            <div style="font-size:30px; margin: 60px; text-align: center;">
+                <fieldset style="width: 40%; margin-left: 30%;">
+                    <div>
+                        <label for="login">Логин</label>
+                        <input type="text" name="login" id="login" required placeholder="Логон">
+                    </div>
+
+                    <div>
+                        <label for="password">Пароль</label>
+                        <input type="text" name="password" id="password" required placeholder="Пароль">
+                    </div>
+                </fieldset>
+                <div>
+                    <button type="submit">Отправить</button>
+            </form>
+                <form action="index.html">
+                    <button type="submit">Вернуться</button>
+                </form>
+            </div>
+        </div>
+    </main>
+</body>
+</html>
