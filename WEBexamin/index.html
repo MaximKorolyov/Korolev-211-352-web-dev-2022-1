@@ -1,0 +1,269 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="style.css"/>
+    <link href="bootstrap.min.css" rel="stylesheet" type="text/css" />
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet" 
+		integrity="sha384-GLhlTQ8iRABdZLl6O3oVMWSktQOp6b7In1Zl3/Jr59b6EGGoI1aFkw7cmDA6j6gD" crossorigin="anonymous">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.10.2/font/bootstrap-icons.css">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=IBM+Plex+Sans:wght@100;300;400&family=PT+Sans:ital,wght@0,700;1,400&family=Source+Sans+Pro:ital,wght@1,600&display=swap" rel="stylesheet">
+    <title>Моисей Экскурсии по москве</title>
+</head>
+
+<body class="backgr">
+    
+    <header>
+            <nav class="navv">               
+              <a class="log" href="index.html"><img src="img/logo.png">МОИСЕЙ</a>
+              <a href="index.html">Экскурсии по Москве</a>
+              <a class="left" href="lk.html">Личный кабинет</a>                              
+            </nav>
+    </header>
+
+    <main>
+      <div class="massage" id="divmassage">
+        <p id = 'balv' >Сообщений пока нет</p>
+      </div>
+      
+	<section class="us">
+        <div class="container ">
+            <div class="row">
+                <div class="col-12">
+                    <h2 class="text-center text-uppercase color1 mb-1 pt-5">О нас</h2>
+                </div>
+            </div>
+            <div class="row align-items-center mb-5 "></div>
+            <div class="text-center col-sm-12">
+                <h5> Наша компания занимается проведением экскурсий уже 9 лет</h5>
+                <h5>Мы не станем говорить, что наша компания является самой лучшей, за нас это скажут 
+                    положительные отзывы клиентов
+                </h5>
+                <h5>Наша компания носит имя - Моисей. Наш слоган - Мы знаем куда вести</h5>
+                <img class="imgg" src="img/logo.png">
+            </div>
+        </div>
+   	</section>
+    
+	<section class="about">
+        <div class="container">
+            <div class="row">
+                <div class="col-12 ">
+                    <h2 class="text-center text-uppercase color1 mb-5 pt-5 ">Почему именно мы</h2>
+                </div>
+            </div>
+            <div class="column-gap-3 row mb-5 col-md-8 offset-md-3 align-items-center">
+                <div class="col-xl-4 col-md-6 col-sm-12 mb-3 bg-info rounded">
+                    <h5 class="text-center p-3">Лучшие гиды</h5>
+                    <div class="line"></div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12 mb-3 bg-info rounded">
+                    <h5 class="text-center p-1">Лучшая организация маршрутов</h5>
+                    <div class="line"></div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12 mb-3 bg-info rounded">
+                    <h5 class="text-center p-3">Самые низкие цены</h5>
+                    <div class="line"></div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12 mb-3 bg-info rounded">
+                    <h5 class="text-center p-1">Множество положительных отзывов</h5>
+                    <div class="line"></div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12 mb-3 bg-info rounded">
+                    <h5 class="text-center p-3">Скидки</h5>
+                    <div class="line"></div>
+                </div>
+                <div class="col-xl-4 col-md-6 col-sm-12 mb-3 bg-info rounded">
+                    <h5 class="text-center p-3">Экскурсии в любое время</h5>
+                    <div class="line"></div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<section class="find pt-3 pb-3" id="find">
+        <div class="container ">
+            <form class="border p-3 rounded" id="filter_form">
+                <div class="form-row">
+                    <div class="col-12 pb-1">
+                        <h1 class="text-md-center ">Список пешеходных маршрутов</h1>
+                        <label for="searchField1">Поиск по объекту</label>
+                        <input type="search" class="form-control" placeholder="Введите название" name="src1"
+                            id="searchField1" required />
+                    </div>
+                </div>
+                <button class="btn btn-light" type="submit">Найти</button>
+            </form>
+            <div class="container">
+                <table class="table table-bordered mt-4">
+                    <thead>
+                        <tr>
+                            <th scope="col">№</th>
+                            <th scope="col">Название маршрута</th>
+                            <th scope="col">Краткое описание</th>
+                            <th scope="col">Основные объекты</th>
+                            <th scope="col"></th>
+                        </tr>
+                    </thead>
+                    <tbody class="route_choose_fill"></tbody>
+                </table>
+            </div>
+            <nav class="pl-3" aria-label="Page navigation example">
+                <ul class="pagination justify-content-center" id="pge"></ul>
+            </nav>
+        </div>
+    </section>
+
+
+
+      
+	<section class="order" id="order">
+        <div class="container">
+            <div class="row justify-content-center">
+                <h3>Доступные гиды по маршруту<span id="tour-name"></span></h3>
+                <div class="container-fluid">
+                </div>
+                <div class="container">
+                    <table class="table table-bordered mt-4">
+                        <thead>
+                            <tr>
+                                <th scope="col">№</th>
+                                <th scope="col">ФИО</th>
+                                <th scope="col">Языки</th>
+                                <th scope="col">Опыт работы</th>
+                                <th scope="col">Стоимость услуг в час</th>
+                                <th scope="col"></th>
+                            </tr>
+                        </thead>
+                        <tbody class="guide_choose_fill"></tbody>
+                    </table>
+                </div>
+            </div>
+            <nav class="pl-3" aria-label="Page navigation example">
+                <ul class="pagination justify-content-center" id="pge-guides"></ul>
+            </nav>
+            <div class="row justify-content-around mt-3 flex-wrap">
+                <div class="makeReqButton">
+                    <button data-action="create" class="btn btn-warning btn-outline-success" data-bs-toggle="modal"
+                        data-bs-target="#add-task-form1" onclick="makeRequest()">
+                        Оформить заявку
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+	<div class="modal fade" id="add-task-form1" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+        <div class="modal-dialog modal-dialog-centered modal-lg">
+            <div class="modal-content">
+                <div class="modal-header background-color: var(--color2)">
+                    <h1 class="modal-title fs-5 text-white" id="exampleModalLabel">
+                        Оформление заявки
+                    </h1>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+                </div>
+                <div class="modal-body">
+                    <form class="container-fluid">
+                        <div class="row mb-3">
+                            <label class="col-md-3 col-form-label text-black" for="task-name">Гид</label>
+                            <div class="col-md-9">
+                                <p name="task-name" id="guideName" class="text-black"></p>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label class="col-md-3 col-form-label text-black" for="task-desc">Маршрут</label>
+                            <div class="col-md-9">
+                                <p name="task-desc" id="routeName" class="text-black"></p>
+                            </div>
+                        </div>
+                        <div class="row mb-3">
+                            <label for="input-status" class="col-md-3 col-form-label text-black"
+                                id="dataInput">Дата</label>
+                            <div class="col-md-9">
+                                <input type="date" name="date" id="input-status" min="2023-01-11" max="2023-31-12"
+                                    value="2023-01-11" class="dataInput" />
+                            </div>
+                            <label for="input-status" class="col-md-3 col-form-label text-black">Колличество
+                                человек</label>
+                            <div class="col-md-9">
+                                <input type="number" name="time" id="input-status1" min="1" max="20" />
+                            </div>
+                            <label for="input-status" class="col-md-3 col-form-label text-black">Время</label>
+                            <div class="col-md-9">
+                                <input type="time" name="time" id="input-status2" min="09:00" max="23:00" value="09:00"
+                                    step="1800" class="timeInput" />
+                            </div>
+                            <label for="input-status" class="col-md-3 col-form-label text-black">Длительность</label>
+                            <div class="col-md-9">
+                                <select name="duration" id="input-status3">
+                                    <option selected value="1">1 час</option>
+                                    <option value="2">2 часа</option>
+                                    <option value="3">3 часа</option>
+                                    <option value="4">4 часа</option>
+                                </select>
+                            </div>
+                            <label for="input-status" class="col-md-3 col-form-label text-black">Интерактивный путеводитель</label>
+                            <div class="col-md-9">
+                                <input type="checkbox" name="checkbox" id="input-status4" class="checkboxSC" />
+                                <p class="col-md-3 col-form-label text-black">(Стоимость увеличивается в 1,5 раза)</p>
+                            </div>
+                            <label for="input-status" class="col-md-3 col-form-label text-black">Трансфер до ближайших 
+								станций метро после экскурсии</label>
+                            <div class="col-md-9">
+                                <input type="checkbox" name="checkbox" id="input-status5" class="checkboxTS" />
+                                <p class="col-md-3 col-form-label text-black">(Стоимость увеличивается на
+									25% в выходные дни и на 30% в будние)</p>
+                            </div>
+                            <label for="input-status" class="col-md-3 col-form-label text-black">Итоговая
+                                стоимость:<span class="total-summary"></span></label>
+                        </div>
+                    </form>
+                </div>
+                <div class="modal-footer background-color: var(--color1)">
+                    <button type="button" class="btn btn-secondary" data-bs-dismiss="modal">
+                        Отмена
+                    </button>
+                    <button type="button" class="btn btn-primary" id="create-btn" data-bs-dismiss="modal"
+                        onclick="saveRequest()">
+                        Создать
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
+
+	
+    </main>
+<!-- 	
+		<p>Королев М.Д. 211-352</p>
+    	<button type="button" id="massage" class="btn btn-warning" onclick="massage()">тест</button>
+	 -->
+    <footer>
+        <p1 style="color:aliceblue">Королев М.Д. 211-352</p1>
+        <div class="container">
+            <div class="row">
+                <div class="col-12 text-center">
+                    <a href="https://github.com/MaximKorolyov" target="_blank" class="btn btn-outline-light"><i
+                            class="bi bi-github"></i></a>
+                    <a href="mailto:max_klasikl@mail.ru" target="_blank" class="btn btn-outline-light"><i
+                            class="bi bi-envelope-at"></i></a>
+                    <a href="https://t.me/Haterast" target="_blank" class="btn btn-outline-light"><i
+                            class="bi bi-telegram"></i></a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <script src="main.js"></script>
+	
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.js"></script>
+	<script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js"
+        integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo"
+        crossorigin="anonymous"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js" integrity="sha384-w76AqPfDkMBDXo30jS1Sgez6pr3x5MlQ1ZAGC+nuZB+EYdgRZgiwxhTBTkF7CXvN" crossorigin="anonymous"></script>
+</body>
+</html>
